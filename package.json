@@ -1,0 +1,12 @@
+{
+  "name": "node_test_project",
+  "version": "1.0.0",
+  "description": "Test Project for Vanilla Node (no express)",
+  "main": "index.js",
+  "author": "Kyle Treptow",
+  "license": "MIT",
+  "scripts": {
+    "start": "node test1.js",
+    "sass-watch": "sass --watch public/css --style nested"
+  }
+}
