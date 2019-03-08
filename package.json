@@ -6,7 +6,7 @@
   "author": "Kyle Treptow",
   "license": "MIT",
   "scripts": {
-    "start": "node test1.js",
+    "start": "node index.js",
     "sass-watch": "sass --watch public/css --style nested"
   }
 }
