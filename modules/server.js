@@ -18,7 +18,7 @@ module.exports.runServer= function(port){
       });
     } else if(req.url.includes('/public/js/')) { // JAVASCRIPT
       fs.readFile('.'+req.url, function(err, data) {
-        res.writeHead(200, {'Content-Type': 'text/css'});
+        res.writeHead(200, {'Content-Type': 'text/javascript'});
         res.write(data);
         res.end();
       });
