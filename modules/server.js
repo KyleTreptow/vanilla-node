@@ -10,7 +10,13 @@ module.exports.runServer= function(port){
         res.write(data);
         res.end();
       });
-    } else if(req.url == '/public/css/style.css'){ // CSS STYLESHEET
+    } else if(req.url.includes('/public/css/')){ // CSS STYLESHEET
+      fs.readFile('.'+req.url, function(err, data) {
+        res.writeHead(200, {'Content-Type': 'text/css'});
+        res.write(data);
+        res.end();
+      });
+    } else if(req.url.includes('/public/js/')) { // JAVASCRIPT
       fs.readFile('.'+req.url, function(err, data) {
         res.writeHead(200, {'Content-Type': 'text/css'});
         res.write(data);
@@ -21,6 +27,5 @@ module.exports.runServer= function(port){
       res.write(q.pathname);
       res.end();
     }
-
   }).listen(port || 8080); // defaults to 8080
 }
